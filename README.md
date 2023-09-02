@@ -4,7 +4,10 @@ Keywords: electron, chartjs, crontab
 
 This is a desktop app built on Electron. It reads from a csv file which records battery info every 3 minutes and visualize it using Chartjs. You can set a crontab task to record the data.
 
-![Video](https://user-images.githubusercontent.com/41911311/265234364-33acca76-c345-4714-b6e3-dc265d73a365.mp4)
+
+https://github.com/tedlex/iBattery/assets/41911311/d7a46b5a-074d-4e87-855c-9655f0436108
+
+
 
 ## Features:
 
@@ -19,7 +22,7 @@ This is a desktop app built on Electron. It reads from a csv file which records 
 
 ## Installation:
 
-1. You can download the dmg or clone this project and build the electron app on your own.
+1. You can download the dmg in the releases on the right side of the page, or clone this project and build the electron app on your own.
 
 ## CSV File:
 
