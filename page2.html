@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iBattery</title>
+    <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="./assets/chartjs-adapter-date-fns_dist_chartjs-adapter-date-fns.bundle.min.js"></script>
+    <link rel="stylesheet" href="./assets/button.css" />
+  </head>
+  <body>
+    <div class="ui-group">
+      <div class="button-group">
+        <button class="button" id="minuteButton" data-href="index.html">
+          Day
+        </button>
+        <button class="button is-checked" id="dayButton" data-href="page2.html">
+          Month
+        </button>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 1rem">
+      <canvas id="workingTimeChart" width="400" height="100"></canvas>
+    </div>
+    <div style="margin-bottom: 1rem">
+      <canvas id="consumptionRateChart" width="400" height="100"></canvas>
+    </div>
+    <script src="./assets/renderer2.js"></script>
+  </body>
+</html>

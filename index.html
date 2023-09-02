@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>iBattery</title>
+    <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+    <script src="./assets/chartjs-adapter-date-fns_dist_chartjs-adapter-date-fns.bundle.min.js"></script>
+    <link rel="stylesheet" href="./assets/button.css" />
+    <link rel="stylesheet" href="./assets/range.css" />
+  </head>
+
+  <body>
+    <div class="ui-group">
+      <div class="button-group">
+        <button
+          class="button is-checked"
+          id="minuteButton"
+          data-href="index.html"
+        >
+          Day
+        </button>
+        <button class="button" id="dayButton" data-href="page2.html">
+          Month
+        </button>
+      </div>
+    </div>
+    <div style="margin-bottom: 1rem; margin-top: 1rem">
+      <canvas id="batteryChart" width="400" height="180"></canvas>
+    </div>
+    <div class="controls">
+      <div class="control">
+        <div>Days</div>
+        <div>
+          <input
+            type="range"
+            id="days"
+            min="1"
+            max="7"
+            value="1"
+            list="daysTicks"
+          />
+          <datalist id="daysTicks" style="--list-length: 7">
+            <option value="1">1</option>
+            <option value="2"></option>
+            <option value="3">3</option>
+            <option value="4"></option>
+            <option value="5">5</option>
+            <option value="6"></option>
+            <option value="7">7</option>
+          </datalist>
+        </div>
+      </div>
+      <div class="control">
+        <div>Smooth</div>
+        <div>
+          <input
+            type="range"
+            id="stepSize"
+            min="1"
+            max="11"
+            value="1"
+            list="stepSizeTicks"
+          />
+          <datalist id="stepSizeTicks" style="--list-length: 11">
+            <option value="1">1</option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5">5</option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+            <option value="10">10</option>
+            <option value="11">Max</option>
+          </datalist>
+        </div>
+      </div>
+    </div>
+    <button id="refresh">Refresh</button>
+    <button id="csvFile">Select File</button>
+    <script src="./assets/renderer.js"></script>
+  </body>
+</html>

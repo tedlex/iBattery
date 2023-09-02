@@ -1,0 +1,38 @@
+{
+  "name": "ibattery",
+  "productName": "iBattery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "build": {
+    "appId": "com.ibattery.id",
+    "productName": "iBattery",
+    "mac": {
+      "category": "productivity",
+      "icon": "assets/icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^26.1.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "csv-parser": "^3.0.0",
+    "date-fns": "^2.30.0",
+    "electron-store": "^8.1.0"
+  }
+}

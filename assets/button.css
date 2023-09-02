@@ -1,0 +1,59 @@
+.ui-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ---- button ---- */
+
+.button {
+  display: inline-block;
+  outline: none;
+  padding: 0.5em 1em;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #444;
+  font-size: 0.9em;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+.button:active,
+.button.is-checked {
+  background-color: #444;
+  border: 1px solid #444;
+}
+
+.button.is-checked {
+  color: white;
+}
+
+.button:active {
+}
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: -1px;
+}
+
+.button-group .button:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.button-group .button:last-child {
+  border-radius: 0 4px 4px 0;
+}
