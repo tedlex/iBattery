@@ -232,9 +232,15 @@ const updateStep = (newConsumptionData) => {
 
 const updateDatasets = (results) => {
   chart.data.datasets[0].data = results.data1;
+  chart.data.datasets[1].data = results.dayLines;
+  chart.data.datasets[2].data = results.chargingData;
   chart.options.scales.x = xScale(results.range);
   // update datasets about segments with new data
   for (let i = 0; i < results.consumptionData.length; i++) {
     chart.data.datasets[i + 3].data = results.consumptionData[i];
+  }
+  // pop datasets that are no longer needed
+  while (chart.data.datasets.length > results.consumptionData.length + 3) {
+    chart.data.datasets.pop();
   }
 }
